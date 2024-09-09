@@ -34,14 +34,14 @@ namespace FigureArea
         }
         public bool IsRight()
         {
-            return (Sides[0] * Sides[0] + Sides[1] * Sides[2] == Sides[3] * Sides[3]);
+            return (Sides[0] * Sides[0] + Sides[1] * Sides[1] == Sides[2] * Sides[2]);
         }
 
         public void IsValidTriangle(double side1, double side2, double side3)
         {
             if(side1<=0||side2<=0||side3<=0)
             {
-                throw new ArgumentException("All sides of a triangle must be positive.")
+                throw new ArgumentException("All sides of a triangle must be positive.");
             }
             if (side1 + side2 <= side3 || side1 + side3 <= side2 || side2 + side3 <= side1)
             {
